@@ -115,13 +115,7 @@ class Manager():
         self._scheduling = False
 
         # TODO: Eventually these should move to main.py
-        for app, qr in ( (ClockApp, True),
-                         (StepCounterApp, True),
-                         (StopwatchApp, True),
-                         (HeartApp, True),
-                         (FlashlightApp, False),
-                         (SettingsApp, False),
-                         (TestApp, False) ):
+        for app, qr in ((ClockApp, True)):
             try:
                 self.register(app(), qr)
             except:
